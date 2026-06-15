@@ -1,0 +1,229 @@
+/* Alimentos.css — estilos de la pantalla de alimentos */
+
+.alimentos-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* TOPBAR */
+.alimentos-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid #222222;
+  flex-shrink: 0;
+}
+
+.alimentos-topbar-title {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e0e0e0;
+}
+
+.añadir-btn {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #378ADD;
+  border: 1px solid #378ADD;
+  border-radius: 4px;
+  padding: 4px 12px;
+  cursor: pointer;
+  background: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.añadir-btn:hover {
+  background: #0d1a2a;
+}
+
+/* CONTENIDO */
+.alimentos-content {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.alimentos-left {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #222222;
+  min-width: 0;
+}
+
+.alimentos-right {
+  flex: 0.8;
+  padding: 0.75rem 1rem;
+  overflow-y: auto;
+}
+
+/* FILTROS */
+.filtros {
+  display: flex;
+  gap: 6px;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #222222;
+  flex-wrap: wrap;
+}
+
+.filtro-btn {
+  font-size: 10px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid #222222;
+  color: #555555;
+  cursor: pointer;
+  background: none;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 0.5px;
+}
+
+.filtro-btn.active {
+  background: #0d1a2a;
+  border-color: #378ADD;
+  color: #378ADD;
+}
+
+/* TABLA */
+.alimentos-table-wrap {
+  overflow-y: auto;
+  flex: 1;
+  padding: 0 1rem 1rem;
+}
+
+table.alimentos-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+table.alimentos-table th {
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #555555;
+  text-align: right;
+  padding: 6px;
+  border-bottom: 1px solid #222222;
+  font-weight: 500;
+  position: sticky;
+  top: 0;
+  background: #0d0d0d;
+}
+
+table.alimentos-table th:first-child { text-align: left; }
+table.alimentos-table th:last-child { text-align: center; }
+
+table.alimentos-table td {
+  font-size: 11px;
+  color: #555555;
+  text-align: right;
+  padding: 6px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+table.alimentos-table td:first-child {
+  text-align: left;
+  color: #e0e0e0;
+  font-size: 12px;
+}
+
+table.alimentos-table td:last-child { text-align: center; }
+table.alimentos-table tr:hover td { background: #111111; }
+table.alimentos-table td.hi { color: #378ADD; font-weight: 500; }
+
+.cmp-btn {
+  font-size: 10px;
+  border: 1px solid #222222;
+  border-radius: 4px;
+  padding: 2px 7px;
+  color: #555555;
+  cursor: pointer;
+  background: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.cmp-btn.selected-a {
+  background: #0d1a2a;
+  border-color: #378ADD;
+  color: #378ADD;
+}
+
+.cmp-btn.selected-b {
+  background: #2a1a00;
+  border-color: #EF9F27;
+  color: #EF9F27;
+}
+
+/* COMPARADOR */
+.section-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #555555;
+  margin-bottom: 12px;
+}
+
+.cmp-empty {
+  font-size: 11px;
+  color: #333333;
+  text-align: center;
+  padding: 2rem 0;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+.cmp-nombres {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #222222;
+}
+
+.cmp-nombre-a { font-size: 11px; font-weight: 500; color: #378ADD; }
+.cmp-nombre-b { font-size: 11px; font-weight: 500; color: #EF9F27; }
+
+.cmp-macro { margin-bottom: 14px; }
+
+.cmp-macro-label {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #555555;
+  margin-bottom: 6px;
+}
+
+.cmp-bars {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cmp-val-a { font-size: 12px; font-weight: 500; color: #378ADD; width: 32px; text-align: right; flex-shrink: 0; }
+.cmp-val-b { font-size: 12px; font-weight: 500; color: #EF9F27; width: 32px; text-align: left; flex-shrink: 0; }
+
+.cmp-track-wrap {
+  flex: 1;
+  display: flex;
+  gap: 2px;
+}
+
+.cmp-half {
+  flex: 1;
+  height: 6px;
+  background: #111111;
+  border-radius: 3px;
+  overflow: hidden;
+  display: flex;
+}
+
+.cmp-half-a { justify-content: flex-end; }
+.cmp-half-b { justify-content: flex-start; }
+
+.cmp-fill-a { height: 100%; background: #378ADD; border-radius: 3px; }
+.cmp-fill-b { height: 100%; background: #EF9F27; border-radius: 3px; }
